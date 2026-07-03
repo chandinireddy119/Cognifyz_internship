@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Basic Calculator</title>
+<style>
+  body{font-family:Segoe UI,Arial,sans-serif;background:#f4f6f8;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}
+  .calc{background:#fff;padding:32px;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.08);width:300px;text-align:center}
+  input{width:90%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:6px;font-size:15px}
+  button{width:95%;padding:12px;background:#2b4c7e;color:#fff;border:none;border-radius:6px;font-size:15px;margin-top:8px;cursor:pointer}
+  #result{margin-top:16px;font-size:20px;font-weight:600;color:#2b4c7e}
+</style>
+</head>
+<body>
+  <div class="calc">
+    <h2>Add Two Numbers</h2>
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+    <button onclick="addNumbers()">Calculate</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    function addNumbers(){
+      const a = parseFloat(document.getElementById('num1').value) || 0;
+      const b = parseFloat(document.getElementById('num2').value) || 0;
+      document.getElementById('result').textContent = "Result: " + (a + b);
+    }
+  </script>
+</body>
+</html>
